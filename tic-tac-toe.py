@@ -1,4 +1,5 @@
-def printboard(board):
+#function to print the board for every move
+def printboard(board):   
     print('       |        |        ')
     print('   '+board[7]+'   |   '+board[8]+'    |    '+board[9]+'   ') 
     print('       |        |        ')
@@ -12,11 +13,10 @@ def printboard(board):
     print('       |        |        ')
     
     
-
-
-def check_win(board):
+#function to check if any player has won the match or not
+def check_win(board):    
     if(board[1] == board[2] == board[3] != ' ' ):
-        return 1
+        return 1                                            #returns 1 if a line of same mark has been found 
     elif(board[4] == board[5] == board[6] != ' ' ):
         return 1
     elif(board[7] == board[8] == board[9] != ' ' ):
@@ -35,15 +35,15 @@ def check_win(board):
         return 0;
     
       
-    
-def check_place(board,n):
+#when a user enters a input this function checks if the place is occupied or not     
+def check_place(board,n):                       
     if(board[n]=='X' or board[n]=='O'):
         return 0
     else:
         return 1
 
-    
-def place_player1(board):
+#function takes input for player1 
+def place_player1(board):                      
     print('player1 enter your move(1-9):')
     position = int(input())
     
@@ -79,7 +79,7 @@ def board_full(board):
     return 1
         
     
-    
+#list to define position by index and marker on it by its values    
 theboard=[' ']*10
 theboard[0]='#'
 
